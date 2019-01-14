@@ -14,6 +14,8 @@ bot.on("message", async message=> {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+  
+  
 if(cmd ===`${prefix}serverinfo`){
   let sicon = message.guild.displayAvatarURL;
   let serverinbed = new Discord.RichEmbed()
@@ -25,6 +27,12 @@ if(cmd ===`${prefix}serverinfo`){
   .addField("Total Members", message.guild.memberCount);
 
   return message.channel.send(serverinbed);
+}
+  
+  
+  if(cmd ===`${prefix}cmds`){
+  let serverinbed = new Discord.RichEmbed()
+  message.channel.send("```Warn, Kick, Clear, Ban```")
 }
 if(cmd === `${prefix}kick`){
 let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
