@@ -110,7 +110,7 @@ message.channel.bulkDelete(args[0]).then(() => {
   let clearembed = new Discord.RichEmbed()
   .setDescription("Clear")
   .setColor("#e09d0e")
-  .addFielf("Cleared by", message.author)
+  .addField("Cleared by", message.author)
   .addField("Cleared", args[0])
   .addField("Time", message.createdAt);
 
