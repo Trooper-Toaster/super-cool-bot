@@ -80,7 +80,7 @@ let warnChannel = message.guild.channels.find(`name`, "modlog")
 if(!warnChannel) return message.channel.send("Cant Find the ModLog")
 
 message.channel.send("User has been Warned!");
-message.author.sendMessage("Hi")
+wUser.sendMessage(`You have been warned for ${wreason}`)
 warnChannel.send(warnEmbed);
 return;
 
