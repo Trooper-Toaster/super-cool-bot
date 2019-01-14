@@ -54,6 +54,7 @@ let kickChannel = message.guild.channels.find(`name`, "modlog")
 if(!kickChannel) return message.channel.send("Cant Find the ModLog")
 
 message.guild.member(kUser).kick(kreason);
+kUser.sendMessage(`You were kicked for ${kreason}`);
 kickChannel.send(kickEmbed);
 
 
@@ -80,7 +81,7 @@ let warnChannel = message.guild.channels.find(`name`, "modlog")
 if(!warnChannel) return message.channel.send("Cant Find the ModLog")
 
 message.channel.send("User has been Warned!");
-wUser.sendMessage(`You have been warned for ${wreason}`)
+wUser.sendMessage(`You have been warned for ${wreason}`);
 warnChannel.send(warnEmbed);
 return;
 
@@ -104,7 +105,8 @@ let banembed = new Discord.RichEmbed()
 let kickChannel = message.guild.channels.find(`name`, "modlog")
 if(!kickChannel) return message.channel.send("Cant Find the ModLog")
 
-message.guild.member(bUser).ban(kreason);
+message.guild.member(bUser).ban(breason);
+ bUser.sendMessage(`You were kicked for ${breason}`);
 kickChannel.send(banembed);
 
 
