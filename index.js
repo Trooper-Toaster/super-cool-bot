@@ -5,7 +5,7 @@ bot.on("ready", async () => {
   console.log(`${bot.user.username} is online`);
   bot.user.setGame("with the Breeze Dev Team");
 });
-bot.commands = new Discord.Collection();
+
 
 
 
@@ -266,7 +266,7 @@ let banembed = new Discord.RichEmbed()
 let kickChannel = message.guild.channels.find(`name`, "modlog")
 if(!kickChannel) return message.channel.send("Cant Find the ModLog")
 
-message.guild.member(bUser).ban(kreason);
+message.guild.member(bUser).ban(breason);
 kickChannel.send(banembed);
 bUser.sendMessage(`You have been warned for ${breason}`);
 
