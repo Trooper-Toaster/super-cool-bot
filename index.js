@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online`);
-  bot.user.setGame("with the Breeze Dev Team");
+  bot.user.setGame("with Chris");
 });
 
 
@@ -314,5 +314,5 @@ message.channel.bulkDelete(args[0]).then(() => {
 
 
 
-bot.login(botconfig.token);
+bot.login(process.env.TOKEN);
 
